@@ -1,0 +1,206 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Container principal */
+#container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Formulário de busca */
+/* Estilo do formulário de busca */
+#search {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 25px;
+    padding: 5px 15px;
+    flex: 1;
+    margin-right: 10px;
+}
+
+.search-container i {
+    color: rgba(255, 255, 255, 0.7);
+    margin-right: 10px;
+}
+
+#city_name {
+    padding: 10px 0 10px 5px;
+    width: 100%;
+    border: none;
+    background: transparent;
+    font-size: 16px;
+    outline: none;
+    color: #fff;
+}
+
+#city_name::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+button {
+    padding: 10px;
+    border: none;
+    background: #ff6f61;
+    color: #fff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #ff4a3d;
+}
+
+/* Título da cidade */
+#title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Informações principais do clima */
+#temp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#temp_img {
+    width: 80px;
+    height: 80px;
+    margin-right: 15px;
+}
+
+#temp_value {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+#temp_description {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Outras informações do clima */
+#other_infos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.info {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.info:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.info i {
+    font-size: 1.5rem;
+    margin-right: 10px;
+    color: #ff6f61;
+}
+
+.info h2 {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.info p {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+
+#temp_max_icon {
+    color: #ff6f61; 
+}
+
+
+#temp_min_icon {
+    color: #61b0ff; 
+}
+
+
+#humidity_icon {
+    color: #61d4ff; 
+}
+
+
+#wind_icon {
+    color: #d3d3d3; 
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    #title {
+        font-size: 2rem;
+    }
+
+    #temp_value {
+        font-size: 2.5rem;
+    }
+
+    #temp_description {
+        font-size: 1rem;
+    }
+
+    #other_infos {
+        grid-template-columns: 1fr;
+    }
+
+    .info {
+        padding: 10px;
+    }
+
+    .info h2 {
+        font-size: 0.9rem;
+    }
+
+    .info p {
+        font-size: 1rem;
+    }
+}
